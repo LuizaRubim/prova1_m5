@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de caminhos</title>
+</head>
+<body>
+    <h1>Lista de Caminhos</h1>
+    <ul>
+        {% for caminho in caminhos %}
+            <li><strong>ID do caminho: </strong>{{ caminho.id }}</li>
+                <li><strong>Caminho:</strong> {{ caminho.caminho }}</li>
+        {% endfor %}
+    </ul>
+    <button><a href="/caminhos/novo" method="get">adicionar caminho</button>
+    <button><a href="/">voltar</a></button>
+</body>
+</html>

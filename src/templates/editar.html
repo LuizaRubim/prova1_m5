@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Dados</title>
+</head>
+<body>
+    <h1>Editar Dados</h1>
+    
+    <form action="/caminhos/editar" method="POST">
+        <input type="text" id="nome" name="nome" value="{{nome}}">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{email}}">
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" value="{{telefone}}">
+
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>

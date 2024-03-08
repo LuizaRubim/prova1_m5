@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo caminho</title>
+</head>
+<body>
+    <h1>Cadastrar caminho</h1>
+    <form action="/caminhos/novo" method="post">
+        <div id="pontos"></div>
+        <button type="button" onclick="adicionarPonto()">Adicionar ponto</button>
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        var pontoAtual = 1;
+        function adicionarPonto() {
+            var divPontos = document.getElementById('pontos');
+            var inputs = '<h2>Ponto ' + pontoAtual + '</h2>';
+            inputs += '<input type="int" name="' + pontoAtual + '[x]" placeholder="Ponto no eixo x:">';
+            inputs += '<input type="int" name="' + pontoAtual + '[y]" placeholder="Ponto no eixo y:">';
+            inputs += '<input type="int" name="' + pontoAtual + '[z]" placeholder="Ponto no eixo z:">';
+            inputs += '<input type="int" name="' + pontoAtual + '[r]" placeholder="Ponto no eixo r:">';
+            divPontos.insertAdjacentHTML('beforeend', inputs);
+            pontoAtual++;
+        }
+    </script>
+</body>
+</html>
